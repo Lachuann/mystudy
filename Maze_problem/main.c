@@ -118,14 +118,17 @@ int isVisited(Stack *stack, Point p)
 
 int main()
 {
-
   int maze[ROWS][COLS];
 
   initMaze(maze);
-  // printMaze(maze);
 
   Point start = {0, 0}; // Set start point
   Point end = {7, 7};   // Set end point
+
+  if (!isValid(maze, start)) {
+    printf("No path found!\n");
+    return 0;
+  }
 
   Stack stack;
   initStack(&stack);
