@@ -82,11 +82,14 @@ void SortList() {
         }
     }
 }
-
+void MainMenu( )
+{
+    printf("1. 添加学生信息\n2. 删除学生信息\n3. 显示所有学生信息\n4. 查找学生信息\n5. 根据总分排序学生信息\n6. 退出\n请输入你的选择:\n");
+}
 int main() {
     int choice;
     while(1) {
-        printf("1. 添加学生信息\n2. 删除学生信息\n3. 显示所有学生信息\n4. 查找学生信息\n5. 根据总分排序学生信息\n6. 退出\n请输入你的选择:\n");
+        MainMenu();
         scanf("%d", &choice);
         switch(choice) {
             case 1:
